@@ -32,7 +32,7 @@ with open(file_to_load) as election_data:
    
    # print the headers row
    headers = next(file_reader)
-   print(headers)
+   #print(headers)
 
    # counting total vote
    for row in file_reader:
@@ -50,12 +50,28 @@ with open(file_to_load) as election_data:
 
       condidate_votes[condidate_name] += 1
 
+
+# Open the analysis file to write election results analysis in it
+file_to_save = "c:\\Users\\rghaf\Desktop\\UT Data BootCamp\\Working Repo\\03-Election-Analysis\\Analysis\\election_analysis.txt"
+with open(file_to_save, "w") as txt_file:
+
+   election_results = (
+      f"\nElection Results\n"
+      f"---------------------------------\n"
+      f"Total Votes: {total_vote:,}\n"
+      f"---------------------------------\n")
+
+   print(election_results, end="")
+   txt_file.write(election_results)
+
    for condidate_name in condidate_votes:
 
       # To print each condidate's name, vote count and percentage of votes to the terminal
       votes = condidate_votes[condidate_name]
       vote_percentage = float(votes) / float(total_vote) * 100
-      print(f"{condidate_name}: received {vote_percentage:.1f}% ({votes:,})\n")
+      condidate_result = (f"{condidate_name}: received {vote_percentage:.1f}% ({(votes):,})\n")
+      txt_file.write(condidate_result)
+      
 
       # Determine Winning condidate
       if (votes > winning_count) and (vote_percentage > winning_percentage):
@@ -71,7 +87,7 @@ with open(file_to_load) as election_data:
       f"Winning Percentage:  {winning_percentage:.1f}\n"
       f"--------------------------------")
 
-   print(winning_condidate_summary)
+   txt_file.write(winning_condidate_summary)
 
 
    
@@ -79,11 +95,7 @@ with open(file_to_load) as election_data:
    #print(total_vote)
    #print(condidate_votes)
 
-# Open the analysis file to write election results analysis in it
-file_to_save = "c:\\Users\\rghaf\Desktop\\UT Data BootCamp\\Working Repo\\03-Election-Analysis\\Analysis\\election_analysis.txt"
-with open(file_to_save, "w") as txt_file:
-   txt_file.write("Counties in the Election\n--------------------------\n")
-   txt_file.write("Arapahoe\nDenver\nJefferson")
+
 
 
 #import os
