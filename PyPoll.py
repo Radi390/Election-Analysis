@@ -66,7 +66,7 @@ with open(file_to_save, "w") as txt_file:
 
    for condidate_name in condidate_votes:
 
-      # To print each condidate's name, vote count and percentage of votes to the terminal
+      # To write each condidate's name, vote count and percentage of votes in the election analysis file
       votes = condidate_votes[condidate_name]
       vote_percentage = float(votes) / float(total_vote) * 100
       condidate_result = (f"{condidate_name}: received {vote_percentage:.1f}% ({(votes):,})\n")
@@ -79,7 +79,7 @@ with open(file_to_save, "w") as txt_file:
          winning_percentage = vote_percentage
          winning_condidate = condidate_name
 
-
+   # write down the winner result in election analysis file
    winning_condidate_summary = (
       f"--------------------------------\n"
       f"Winner:  {winning_condidate}\n"
@@ -88,17 +88,3 @@ with open(file_to_save, "w") as txt_file:
       f"--------------------------------")
 
    txt_file.write(winning_condidate_summary)
-
-
-   
-   # 3. Print the total votes.
-   #print(total_vote)
-   #print(condidate_votes)
-
-
-
-
-#import os
-#file_to_load = os.path.join("Resources", "election_results.csv")
-#with open(file_to_load) as election_data:
- #   print(election_data)
