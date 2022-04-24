@@ -17,7 +17,7 @@ This Python program aims to analyze Congress election in three Counties, Jeffers
 
 - So the winner of this election is Diana DeGette, with 272,892 votes, 73,8% of the total votes.
 
-![This is an image](/election_analysis.jpg)
+![This is an image](/election_results.jpg)
 
 
 ## Summary
