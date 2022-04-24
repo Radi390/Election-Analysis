@@ -7,7 +7,7 @@ file_to_load = "c:\\Users\\rghaf\Desktop\\UT Data BootCamp\\Working Repo\\03-Ele
 #file_to_load = os.path.join("c:\\Users\\rghaf\Desktop\\UT Data BootCamp\\Working Repo\\03-Election-Analysis", "Resources", "election_results.csv")
 # Add a variable to save the file to a path.
 #file_to_save = os.path.join("analysis", "election_analysis.txt")
-file_to_save = "c:\\Users\\rghaf\Desktop\\UT Data BootCamp\\Working Repo\\03-Election-Analysis\\Analysis\\election_analysis.txt"
+file_to_save = "c:\\Users\\rghaf\Desktop\\UT Data BootCamp\\Working Repo\\03-Election-Analysis\\election_analysis.txt"
 #with open(file_to_save, "w") as txt_file:
 
 # Initialize a total vote counter.
